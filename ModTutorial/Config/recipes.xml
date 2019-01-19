@@ -1,10 +1,10 @@
-<modtutorial>
+﻿<modtutorial>
 	<append xpath="/recipes">
 	<recipe name="weedCleaver" count="1">
 		<ingredient name="resourceForgedIron" count="10"/>
 		<ingredient name="resourceWood" count="5"/>
 	</recipe>
-	<recipe name="foodLentejas" count="1">
+	<recipe name="foodLentejas" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="foodCropPotato" count="2"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
 		<ingredient name="foodCropCorn" count="2"/>
