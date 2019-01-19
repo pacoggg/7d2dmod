@@ -7149,3 +7149,5 @@ xuiSkillNerfedEffect,UI,Skills,New,Disabled by status effect,,,,,
 xuiDefault,UI,Options Video,New,Default,,,,,
 activeBlockPrompt,,Block prompt,New,([DECEA3]Active[-]) {0},,,,,
 inactiveBlockPrompt,,Block prompt,New,(Inactive) {0},,,,,
+foodLentejas,items,Food,new,Lentils,Lentilles,Linsen,,Lentejas,Soczewica
+foodLentejasDesc,items,Food,EnChanged,Your mom always told you to eat lentils. Now's your chance to make her happy! Besides, you know what? They do you good!,Ta mère t'a toujours dit de manger des lentilles. C'est l'occasion de la rendre heureuse ! En plus, tu sais quoi ? Ça te fait du bien !,"Deine Mutter sagte dir immer, du sollst Linsen essen, jetzt hast du die Chance, sie glücklich zu machen! Außerdem, weißt du was? Sie tun dir gut!",,"Tu mamá siempre te decía que te comieras lentejas. ¡Ahora es tu oportunidad de hacerla feliz! Además, ¿sabes qué? ¡Te hacen bien!","Twoja mama zawsze mówiła Ci, abyś jadła soczewicę. Teraz masz szansę, abyś ją uszczęśliwiła! Poza tym, wiesz, co oni robią ci dobrze!"

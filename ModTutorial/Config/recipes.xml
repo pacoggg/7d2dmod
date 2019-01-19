@@ -1,13 +1,15 @@
 <modtutorial>
 	<append xpath="/recipes">
-	<recipe name="ammoArrowStone" count="1">
-		<ingredient name="resourceRockSmall" count="1"/>
-		<ingredient name="resourceWood" count="1"/>
-		<ingredient name="resourceScrapPolymers" count="1"/>
-	</recipe>
 	<recipe name="weedCleaver" count="1">
 		<ingredient name="resourceForgedIron" count="10"/>
 		<ingredient name="resourceWood" count="5"/>
+	</recipe>
+	<recipe name="foodLentejas" count="1">
+		<ingredient name="foodCropPotato" count="2"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+		<ingredient name="foodCropCorn" count="2"/>
+		<ingredient name="foodCropMushrooms" count="1"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>	
 	</append>
 </modtutorial>
