@@ -1,0 +1,60 @@
+<modtutorial>
+
+	<!-- <set xpath="/items/item[contains(@name,'medical')]/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[contains(@name,'drug')]/property[@name='Stacknumber']/@value">250</set>
+	
+	<set xpath="/items/item[@name='suitPants']/effect_group/passive_effect[@name='HypothermalResist']/@value">10</set>
+	<set xpath="/items/item[@name='suitPants']/effect_group/passive_effect[@name='HyperthermalResist']/@value">10</set>
+	
+	Too Dangerous <set xpath="/items/item/property[@name='Stacknumber']/@value">8000</set> -->		
+	
+	<append xpath="/items">
+		<item name="weedCleaver">
+			<property name="DescriptionKey" value="weedCleaverDesc"/>			
+			<property name="Tags" value="knife,melee,light,tool,meleeWeapon,perkTheHuntsman"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="HoldType" value="47"/>
+			<property name="Meshfile" value="Items/Weapons/Melee/Knives/machetePrefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceForgedIron"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="Weight" value="200"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="ActionSkillGroup" value="Blade Weapons"/>
+			<property name="CraftingSkillGroup" value="craftSkillTools"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>				
+				<property name="Damage_type" value="Slashing"/>
+				<property name="Sphere" value="0.15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="DynamicMelee"/>				
+				<property name="Damage_type" value="Slashing"/>
+				<property name="Sphere" value="0.15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+				<property name="Sound_start" value="swoosh"/>
+			</property>			
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="10"/>
+				<passive_effect name="BlockRange" operation="base_set" value="10"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/> 
+				<passive_effect name="BlockDamage" operation="base_set" value="5"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="2" tags="cropHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="wildCropsHarvest"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="300"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="500,8000" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1,1" tier="1,6"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="25" tags="plants,leaves"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="0" tags="stone,earth,wood"/>
+			</effect_group>
+		</item>
+	</append>
+</modtutorial>

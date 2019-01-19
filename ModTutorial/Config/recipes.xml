@@ -1,0 +1,13 @@
+<modtutorial>
+	<append xpath="/recipes">
+	<recipe name="ammoArrowStone" count="1">
+		<ingredient name="resourceRockSmall" count="1"/>
+		<ingredient name="resourceWood" count="1"/>
+		<ingredient name="resourceScrapPolymers" count="1"/>
+	</recipe>
+	<recipe name="weedCleaver" count="1">
+		<ingredient name="resourceForgedIron" count="10"/>
+		<ingredient name="resourceWood" count="5"/>
+	</recipe>	
+	</append>
+</modtutorial>
