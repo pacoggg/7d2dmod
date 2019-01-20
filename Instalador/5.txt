@@ -1,0 +1,23 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+airConditioner,blocks,Block,KgNone,Air Conditioner,Climatiseur,Klimaanlage,,Aire acondicionado,Klimatyzator
+airConditionVentFan,blocks,Block,New,Vent Fan,,,,,
+airConditionVentFanDouble,blocks,Block,New,"Vent Fan, Double",,,,,
+alphabetLetterSignGroupDesc,blocks,Block,EnChanged,Create your own billboards with these single letter signs and numbers.,Créez vos propres panneaux grâce à ces lettres.,Erstelle mit diesen Buchstaben und Zahlen deine eigenen Plakatwände.,,Crea tus propios carteles con estas letras.,Stwórz wlasne billboardy z tymi pojedynczymi znakami.
+arrowHelper,blocks,Block,New,Arrow Helper,,,,,
+arrowSlit,blocks,Block,New,Arrow Slit,,,,,
+awningBlock,blocks,Block,KeyChanged EnChanged,Awning Block,Bloc en toile marron,Stoffplane – Block,,Bloque canela de toldo,Blok - zadaszenie
+awningCNRFull,blocks,Block,KeyChanged EnChanged,Awning Corner Full,Angle complet en toile marron,Stoffplane – Komplette Ecke,,Esquina canela de toldo,
+awningCNRInside,blocks,Block,KeyChanged EnChanged,Awning Corner Inside,Angle intérieur en toile marron,Stoffplane – Innenecke,,Esquina interior canela de toldo,
+awningCNRRound,blocks,Block,KeyChanged EnChanged,Awning Corner Round,Angle arrondi en toile marron,Stoffplane – Abgerundete Ecke,,Esquina redonda canela de toldo,
+awningCNRRoundTop,blocks,Block,New,Awning Corner Round Top,,,,,
+awningCTRSheet,blocks,Block,New,Awning Sheet Centered,,,,,
+awningGable,blocks,Block,KeyChanged EnChanged,Awning Gable,Pignon en toile marron,Stoffplane – Giebel,,Frontón canela de toldo,
+awningGroupDesc,blocks,Block,KgNone,An awning made from cloth.\nThis will greatly reduce fall damage.,Une toile en tissu.,Eine Stoffplane.,,Un toldo hecho de tela.,
+awningPyramid,blocks,Block,KeyChanged EnChanged,Awning Pyramid,Pyramide en toile marron,Stoffplane – Pyramide,,Pirámide canela de toldo,
+awningRamp,blocks,Block,KeyChanged EnChanged,Awning Ramp,Rampe en toile marron,Stoffplane – Rampe,,Rampa canela de toldo,
+awningRampSheet,blocks,Block,New,Awning Ramp Sheet,,,,,
+awningRampSheetEdgeLeft,blocks,Block,New,Awning Ramp Edge Left,,,,,
+awningRampSheetEdgeRight,blocks,Block,New,Awning Ramp Edge Right,,,,,
+
+---------------------------------------------------------una mas----------------------------------------------------------------------------------
+u
