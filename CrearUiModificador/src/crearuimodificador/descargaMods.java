@@ -99,7 +99,10 @@ public class descargaMods {
 			e.printStackTrace();
 		}
                 System.out.println("descomprimiento ...");
-                Descomprimir("d:/"+mod+".zip","d:/");
+                String archComp = "d:/"+mod+".zip";
+                Descomprimir(archComp,"d:/");
+                File f= new File(archComp);
+                f.delete();
                 System.out.println("descomprimido");
 	}
 }
