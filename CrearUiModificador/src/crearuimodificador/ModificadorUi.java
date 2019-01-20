@@ -6,6 +6,13 @@
 package crearuimodificador;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 
 /**
@@ -49,6 +56,11 @@ public class ModificadorUi extends javax.swing.JFrame {
         setTitle("AÑADIENDO MODIFICADORES");
 
         checkSimple.setText("Simple UI");
+        checkSimple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkSimpleActionPerformed(evt);
+            }
+        });
 
         checkVehiculos.setText("Vehículos más rápidos");
 
@@ -63,10 +75,21 @@ public class ModificadorUi extends javax.swing.JFrame {
         jLabel1.setText("Selecciona las modificaciones que quieres añadir al juego.");
 
         addBoton.setText("AÑADIR");
+        addBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBotonActionPerformed(evt);
+            }
+        });
 
         cancelBoton.setText("CANCELAR");
+        cancelBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelBotonActionPerformed(evt);
+            }
+        });
 
         checkTraduccion.setText("Traducción al español (proximamente)");
+        checkTraduccion.setEnabled(false);
 
         jLabel2.setBackground(new java.awt.Color(100, 100, 100));
         jLabel2.setText("Versión Alpha 17.1 Estable");
@@ -100,7 +123,7 @@ public class ModificadorUi extends javax.swing.JFrame {
                                     .addComponent(checkHdhq4)
                                     .addComponent(checkBrass)
                                     .addComponent(checkTraduccion))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(addBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -118,7 +141,7 @@ public class ModificadorUi extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(37, 37, 37)))
-                        .addGap(0, 20, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -167,10 +190,133 @@ public class ModificadorUi extends javax.swing.JFrame {
         textDirectorio.setText(directorio);
     }//GEN-LAST:event_botonDirectorioActionPerformed
 
+    private void checkSimpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkSimpleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkSimpleActionPerformed
+
+    private void cancelBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelBotonActionPerformed
+        
+            System.exit(0);
+        
+    }//GEN-LAST:event_cancelBotonActionPerformed
+
+    private void addBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBotonActionPerformed
+        if (checkSimple.isSelected()==true) {
+            try {
+                InstalarSimple();
+            } catch (IOException ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            checkSimple.setSelected(false);
+            checkSimple.setEnabled(false);
+        } 
+        if (checkVehiculos.isSelected()==true) {
+            InstalarVehiculos();
+            checkVehiculos.setSelected(false);
+            checkVehiculos.setEnabled(false);
+        } 
+        if (checkHdhq4.isSelected()==true) {
+            InstalarHdhq4();
+            checkHdhq4.setSelected(false);
+            checkHdhq4.setEnabled(false);
+        } 
+        if (checkHdhq2.isSelected()==true) {
+            InstalarHdhq2();
+            checkHdhq2.setSelected(false);
+            checkHdhq2.setEnabled(false);
+        } 
+        if (checkJunction.isSelected()==true) {
+            InstalarJunction();
+            checkJunction.setSelected(false);
+            checkJunction.setEnabled(false);
+        } 
+        if (checkBrass.isSelected()==true) {
+            InstalarBrass();
+            checkBrass.setSelected(false);
+            checkBrass.setEnabled(false);
+        } 
+        if (checkTraduccion.isSelected()==true) {
+            InstalarTraduccion();
+            checkTraduccion.setSelected(false);
+            checkTraduccion.setEnabled(false);
+        }  
+    }//GEN-LAST:event_addBotonActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void InstalarSimple() throws IOException{
+        System.out.println("Instalando Simple UI");    
+        String simple="C:\\simple";
+        String path=textDirectorio.getText();
+        copy(simple, path);
+              
+              
+    }
+    public void InstalarVehiculos(){
+              System.out.println("Instalando Mejora velocidad Vehículos");
+              
+    }
+    public void InstalarHdhq4(){
+              System.out.println("Instalando HDHQ 4K");
+              
+    }
+    public void InstalarHdhq2(){
+              System.out.println("Instalando HDHQ 2K");
+              
+    }
+    public void InstalarJunction(){
+              System.out.println("Instalando Junction Box");
+              
+    }
+    public void InstalarBrass(){
+              System.out.println("Instalando Craft Brass");
+              
+    }
+    public void InstalarTraduccion(){
+              System.out.println("Instalando Traducción");
+              
+    }
+    public static void copy(File sourceLocation, File targetLocation) throws IOException {
+        if (sourceLocation.isDirectory()) {
+            copyDirectory(sourceLocation, targetLocation);
+        } else {
+            copyFile(sourceLocation, targetLocation);
+        }
+    }
+    public static void copy(String sSourceLocation, String stargetLocation) throws IOException {         
+         File sourceLocation = new File(sSourceLocation);
+         File targetLocation = new File(stargetLocation);
+
+        if (sourceLocation.isDirectory()) { //Es directorio.
+            copyDirectory(sourceLocation, targetLocation);
+        } else { //Es archivo.
+            copyFile(sourceLocation, targetLocation);
+        }
+    }
+    private static void copyDirectory(File source, File target) throws IOException {
+        if (!target.exists()) {
+            //No existe directorio destino, lo crea.
+            target.mkdir();
+        }
+        for (String f : source.list()) {
+            //Copia archivos de directorio fuente a destino.
+            copy(new File(source, f), new File(target, f));
+        }
+    }
+
+    private static void copyFile(File source, File target) throws IOException {
+        try (
+            InputStream in = new FileInputStream(source);
+            OutputStream out = new FileOutputStream(target)) {
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = in.read(buffer)) > 0) {
+                out.write(buffer, 0, length);
+            }
+        }
+    }
+    public void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
