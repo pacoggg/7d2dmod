@@ -312,7 +312,7 @@ public class ModificadorUi extends javax.swing.JFrame {
     public void InstalarBrass() throws IOException, Exception{
         System.out.println("Instalando Craft Brass");
         descargaMods.DescargaMod("brass");
-        String origen="d:/brass";
+        String origen="c:/brass";
         String destino=textDirectorio.getText();
         copy(origen, destino);  
         File f= new File(origen);

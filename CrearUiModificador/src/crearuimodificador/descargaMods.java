@@ -82,7 +82,7 @@ public class descargaMods {
 			// Se obtiene el inputStream de la foto web y se abre el fichero
 			// local.
 			InputStream is = urlCon.getInputStream();                        
-			FileOutputStream fos = new FileOutputStream("d:/"+mod+".zip");
+			FileOutputStream fos = new FileOutputStream("c:/"+mod+".zip");
 
 			// Lectura de la foto de la web y escritura en fichero local
 			byte[] array = new byte[1000]; // buffer temporal de lectura.
@@ -99,8 +99,8 @@ public class descargaMods {
 			e.printStackTrace();
 		}
                 System.out.println("descomprimiento ...");
-                String archComp = "d:/"+mod+".zip";
-                Descomprimir(archComp,"d:/");
+                String archComp = "c:/"+mod+".zip";
+                Descomprimir(archComp,"c:/");
                 File f= new File(archComp);
                 f.delete();
                 System.out.println("descomprimido");
