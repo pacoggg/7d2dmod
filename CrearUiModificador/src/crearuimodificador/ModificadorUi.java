@@ -94,7 +94,7 @@ public class ModificadorUi extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(100, 100, 100));
         jLabel2.setText("Versión Alpha 17.1 Estable");
 
-        textDirectorio.setText("C:\\Program Files (x86)\\Steam\\steamapps\\common\\7 Days To Die");
+        textDirectorio.setText("C:\\Program Files (x86)\\Steam\\steamapps\\common\\7 Days To Die\\hola");
 
         botonDirectorio.setText("Seleccionar");
         botonDirectorio.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +123,7 @@ public class ModificadorUi extends javax.swing.JFrame {
                                     .addComponent(checkHdhq4)
                                     .addComponent(checkBrass)
                                     .addComponent(checkTraduccion))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(addBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -251,6 +251,8 @@ public class ModificadorUi extends javax.swing.JFrame {
                 InstalarBrass();
             } catch (IOException ex) {
                 Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
             }
             checkBrass.setSelected(false);
             checkBrass.setEnabled(false);
@@ -297,11 +299,13 @@ public class ModificadorUi extends javax.swing.JFrame {
         String destino=textDirectorio.getText();
         copy(origen, destino);      
     }
-    public void InstalarBrass() throws IOException{
+    public void InstalarBrass() throws IOException, Exception{
         System.out.println("Instalando Craft Brass");
+        descargaMods.DescargaMod("brass");
         String origen="d:/brass";
         String destino=textDirectorio.getText();
-        copy(origen, destino);      
+        copy(origen, destino);  
+        System.out.println("El Mod del brass ha sido instalado");
     }
     public void InstalarTraduccion(){
         System.out.println("Instalando Traducción");

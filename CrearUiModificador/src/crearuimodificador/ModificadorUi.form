@@ -182,7 +182,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="textDirectorio">
       <Properties>
-        <Property name="text" type="java.lang.String" value="C:\u005cProgram Files (x86)\u005cSteam\u005csteamapps\u005ccommon\u005c7 Days To Die" containsInvalidXMLChars="true"/>
+        <Property name="text" type="java.lang.String" value="C:\u005cProgram Files (x86)\u005cSteam\u005csteamapps\u005ccommon\u005c7 Days To Die\u005chola" containsInvalidXMLChars="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="botonDirectorio">
