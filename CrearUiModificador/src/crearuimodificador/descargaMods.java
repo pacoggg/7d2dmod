@@ -22,6 +22,8 @@ public class descargaMods {
     /**
 	 * Descarga un fichero jpeg y lo guarda en e:/foto.jpg
 	 * 
+         * @param ficheroZip
+         * @param directorioSalida
 	 * @param args
 	 */
         
@@ -66,11 +68,10 @@ public class descargaMods {
           }
         }
       
-	public static void main(String[] args) throws Exception {
+	public static void DescargaMod(String mod) throws Exception {
 		try {
 			// Url con la foto
-			URL url = new URL(
-					"http://parafurgonetacamper.com/Mods/brass.zip");
+			URL url = new URL("http://parafurgonetacamper.com/Mods/"+mod+".zip");
 
 			// establecemos conexion
 			URLConnection urlCon = url.openConnection();
@@ -80,8 +81,8 @@ public class descargaMods {
 
 			// Se obtiene el inputStream de la foto web y se abre el fichero
 			// local.
-			InputStream is = urlCon.getInputStream();
-			FileOutputStream fos = new FileOutputStream("d:/brass.zip");
+			InputStream is = urlCon.getInputStream();                        
+			FileOutputStream fos = new FileOutputStream("d:/"+mod+".zip");
 
 			// Lectura de la foto de la web y escritura en fichero local
 			byte[] array = new byte[1000]; // buffer temporal de lectura.
@@ -97,6 +98,8 @@ public class descargaMods {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-                Descomprimir("d:/brass.zip","d:");
+                System.out.println("descomprimiento ...");
+                Descomprimir("d:/"+mod+".zip","d:/");
+                System.out.println("descomprimido");
 	}
 }
