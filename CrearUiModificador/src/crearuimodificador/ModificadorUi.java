@@ -211,27 +211,47 @@ public class ModificadorUi extends javax.swing.JFrame {
             checkSimple.setEnabled(false);
         } 
         if (checkVehiculos.isSelected()==true) {
-            InstalarVehiculos();
+            try {
+                InstalarVehiculos();
+            } catch (IOException ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
             checkVehiculos.setSelected(false);
             checkVehiculos.setEnabled(false);
         } 
         if (checkHdhq4.isSelected()==true) {
-            InstalarHdhq4();
+            try {
+                InstalarHdhq4();
+            } catch (IOException ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
             checkHdhq4.setSelected(false);
             checkHdhq4.setEnabled(false);
         } 
         if (checkHdhq2.isSelected()==true) {
-            InstalarHdhq2();
+            try {
+                InstalarHdhq2();
+            } catch (IOException ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
             checkHdhq2.setSelected(false);
             checkHdhq2.setEnabled(false);
         } 
         if (checkJunction.isSelected()==true) {
-            InstalarJunction();
+            try {
+                InstalarJunction();
+            } catch (IOException ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
             checkJunction.setSelected(false);
             checkJunction.setEnabled(false);
         } 
         if (checkBrass.isSelected()==true) {
-            InstalarBrass();
+            try {
+                InstalarBrass();
+            } catch (IOException ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
             checkBrass.setSelected(false);
             checkBrass.setEnabled(false);
         } 
@@ -247,34 +267,44 @@ public class ModificadorUi extends javax.swing.JFrame {
      */
     public void InstalarSimple() throws IOException{
         System.out.println("Instalando Simple UI");    
-        String simple="simple";
-        String path=textDirectorio.getText();
-        copy(simple, path);
+        String origen="simple";
+        String destino=textDirectorio.getText();
+        copy(origen, destino);
               
               
     }
-    public void InstalarVehiculos(){
-              System.out.println("Instalando Mejora velocidad Vehículos");
-              
+    public void InstalarVehiculos() throws IOException{
+        System.out.println("Instalando Mejora velocidad Vehículos");
+        String origen="vehiculo";
+        String destino=textDirectorio.getText();
+        copy(origen, destino);
     }
-    public void InstalarHdhq4(){
-              System.out.println("Instalando HDHQ 4K");
-              
+    public void InstalarHdhq4() throws IOException{
+        System.out.println("Instalando HDHQ 4K");
+        String origen="hdhq4";
+        String destino=textDirectorio.getText();
+        copy(origen, destino);     
     }
-    public void InstalarHdhq2(){
-              System.out.println("Instalando HDHQ 2K");
-              
+    public void InstalarHdhq2() throws IOException{
+        System.out.println("Instalando HDHQ 2K");
+        String origen="hdhq2";
+        String destino=textDirectorio.getText();
+        copy(origen, destino);      
     }
-    public void InstalarJunction(){
-              System.out.println("Instalando Junction Box");
-              
+    public void InstalarJunction() throws IOException{
+        System.out.println("Instalando Junction Box");
+        String origen="junction";
+        String destino=textDirectorio.getText();
+        copy(origen, destino);      
     }
-    public void InstalarBrass(){
-              System.out.println("Instalando Craft Brass");
-              
+    public void InstalarBrass() throws IOException{
+        System.out.println("Instalando Craft Brass");
+        String origen="brass";
+        String destino=textDirectorio.getText();
+        copy(origen, destino);      
     }
     public void InstalarTraduccion(){
-              System.out.println("Instalando Traducción");
+        System.out.println("Instalando Traducción");
               
     }
     public static void copy(File sourceLocation, File targetLocation) throws IOException {
