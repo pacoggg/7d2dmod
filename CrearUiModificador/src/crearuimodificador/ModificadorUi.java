@@ -299,7 +299,7 @@ public class ModificadorUi extends javax.swing.JFrame {
     }
     public void InstalarBrass() throws IOException{
         System.out.println("Instalando Craft Brass");
-        String origen="brass";
+        String origen="d:/brass";
         String destino=textDirectorio.getText();
         copy(origen, destino);      
     }
