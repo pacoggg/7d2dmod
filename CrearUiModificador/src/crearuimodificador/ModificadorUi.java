@@ -247,7 +247,7 @@ public class ModificadorUi extends javax.swing.JFrame {
      */
     public void InstalarSimple() throws IOException{
         System.out.println("Instalando Simple UI");    
-        String simple="C:\\simple";
+        String simple="simple";
         String path=textDirectorio.getText();
         copy(simple, path);
               
