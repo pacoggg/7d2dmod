@@ -64,13 +64,17 @@ public class ModificadorUi extends javax.swing.JFrame {
 
         checkVehiculos.setText("Vehículos más rápidos");
 
-        checkHdhq4.setText("HDHQ 4K Texturas");
+        checkHdhq4.setText("HDHQ 4K Texturas (proximamente)");
+        checkHdhq4.setToolTipText("");
+        checkHdhq4.setEnabled(false);
 
         checkBrass.setText("Cobre y Zinc para hacer Brass");
 
         checkJunction.setText("Junction Box");
 
-        checkHdhq2.setText("HDHQ 2K Texturas");
+        checkHdhq2.setText("HDHQ 2K Texturas (proximamente)");
+        checkHdhq2.setToolTipText("");
+        checkHdhq2.setEnabled(false);
 
         jLabel1.setText("Selecciona las modificaciones que quieres añadir al juego.");
 
@@ -212,6 +216,8 @@ public class ModificadorUi extends javax.swing.JFrame {
                 InstalarSimple();
             } catch (IOException ex) {
                 Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
             }
             checkSimple.setSelected(false);
             checkSimple.setEnabled(false);
@@ -220,6 +226,8 @@ public class ModificadorUi extends javax.swing.JFrame {
             try {
                 InstalarVehiculos();
             } catch (IOException ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
                 Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
             }
             checkVehiculos.setSelected(false);
@@ -247,6 +255,8 @@ public class ModificadorUi extends javax.swing.JFrame {
             try {
                 InstalarJunction();
             } catch (IOException ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
                 Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
             }
             checkJunction.setSelected(false);
@@ -277,19 +287,33 @@ public class ModificadorUi extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public void InstalarSimple() throws IOException{
+    public void InstalarSimple() throws IOException, Exception{
         System.out.println("Instalando Simple UI");    
-        String origen="simple";
+        descargaMods.DescargaMod("simple");
+        String origen="c:/simple";
         String destino=textDirectorio.getText();
-        copy(origen, destino);
+        copy(origen, destino);  
+        File f= new File(origen);
+            //Intentando borrar la carpeta
+             funcionEliminarCarpeta1 (f);
+            //Hasta aqui el borrar la carpeta
+    
+        System.out.println("El Mod del brass ha sido instalado");
               
               
     }
-    public void InstalarVehiculos() throws IOException{
-        System.out.println("Instalando Mejora velocidad Vehículos");
-        String origen="vehiculo";
+    public void InstalarVehiculos() throws IOException, Exception{
+        System.out.println("Instalando Craft Vehículos");
+        descargaMods.DescargaMod("vehiculo");
+        String origen="c:/vehiculo";
         String destino=textDirectorio.getText();
-        copy(origen, destino);
+        copy(origen, destino);  
+        File f= new File(origen);
+            //Intentando borrar la carpeta
+             funcionEliminarCarpeta1 (f);
+            //Hasta aqui el borrar la carpeta
+    
+        System.out.println("El Mod del brass ha sido instalado");
     }
     public void InstalarHdhq4() throws IOException{
         System.out.println("Instalando HDHQ 4K");
@@ -303,11 +327,18 @@ public class ModificadorUi extends javax.swing.JFrame {
         String destino=textDirectorio.getText();
         copy(origen, destino);      
     }
-    public void InstalarJunction() throws IOException{
-        System.out.println("Instalando Junction Box");
-        String origen="junction";
+    public void InstalarJunction() throws IOException, Exception{
+        System.out.println("Instalando Craft Junction");
+        descargaMods.DescargaMod("junction");
+        String origen="c:/junction";
         String destino=textDirectorio.getText();
-        copy(origen, destino);      
+        copy(origen, destino);  
+        File f= new File(origen);
+            //Intentando borrar la carpeta
+             funcionEliminarCarpeta1 (f);
+            //Hasta aqui el borrar la carpeta
+    
+        System.out.println("El Mod del brass ha sido instalado");      
     }
     public void InstalarBrass() throws IOException, Exception{
         System.out.println("Instalando Craft Brass");
@@ -316,13 +347,8 @@ public class ModificadorUi extends javax.swing.JFrame {
         String destino=textDirectorio.getText();
         copy(origen, destino);  
         File f= new File(origen);
-        
             //Intentando borrar la carpeta
              funcionEliminarCarpeta1 (f);
-
-            
-               
-            
             //Hasta aqui el borrar la carpeta
     
         System.out.println("El Mod del brass ha sido instalado");

@@ -127,7 +127,9 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="checkHdhq4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="HDHQ 4K Texturas"/>
+        <Property name="text" type="java.lang.String" value="HDHQ 4K Texturas (proximamente)"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="checkBrass">
@@ -142,7 +144,9 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="checkHdhq2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="HDHQ 2K Texturas"/>
+        <Property name="text" type="java.lang.String" value="HDHQ 2K Texturas (proximamente)"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
