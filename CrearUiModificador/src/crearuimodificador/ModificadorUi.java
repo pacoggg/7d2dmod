@@ -94,7 +94,13 @@ public class ModificadorUi extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(100, 100, 100));
         jLabel2.setText("Versión Alpha 17.1 Estable");
 
-        textDirectorio.setText("C:\\Program Files (x86)\\Steam\\steamapps\\common\\7 Days To Die\\hola");
+        textDirectorio.setText("C:\\Program Files (x86)\\Steam\\steamapps\\common\\7 Days To Die");
+        textDirectorio.setToolTipText("");
+        textDirectorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textDirectorioActionPerformed(evt);
+            }
+        });
 
         botonDirectorio.setText("Seleccionar");
         botonDirectorio.addActionListener(new java.awt.event.ActionListener() {
@@ -263,6 +269,10 @@ public class ModificadorUi extends javax.swing.JFrame {
             checkTraduccion.setEnabled(false);
         }  
     }//GEN-LAST:event_addBotonActionPerformed
+
+    private void textDirectorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textDirectorioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textDirectorioActionPerformed
 
     /**
      * @param args the command line arguments
