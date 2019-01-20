@@ -315,12 +315,31 @@ public class ModificadorUi extends javax.swing.JFrame {
         String origen="d:/brass";
         String destino=textDirectorio.getText();
         copy(origen, destino);  
+        File f= new File(origen);
+        
+            //Intentando borrar la carpeta
+             funcionEliminarCarpeta1 (f);
+
+            
+               
+            
+            //Hasta aqui el borrar la carpeta
+    
         System.out.println("El Mod del brass ha sido instalado");
     }
     public void InstalarTraduccion(){
         System.out.println("Instalando Traducción");
               
     }
+    public static void funcionEliminarCarpeta1(File pArchivo) { 
+                if (!pArchivo.exists()) { return; } 
+
+                if (pArchivo.isDirectory()) { 
+                    for (File f : pArchivo.listFiles()) { 
+                        funcionEliminarCarpeta1(f);  } 
+                } 
+                pArchivo.delete(); 
+                }
     public static void copy(File sourceLocation, File targetLocation) throws IOException {
         if (sourceLocation.isDirectory()) {
             copyDirectory(sourceLocation, targetLocation);
