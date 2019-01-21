@@ -497,7 +497,7 @@ public class ModificadorUi extends javax.swing.JFrame {
     public void InstalarAcero() throws IOException, Exception{
         System.out.println("Instalando Mod para hacer acero a lvl 35");
         descargaMods.DescargaMod("PacoG_Mod");
-        String origen="c:/acero";
+        String origen="c:/PacoG_Mod";
         String destino=textDirectorio.getText();
         copy(origen, destino);
         File f= new File(origen);
@@ -505,7 +505,7 @@ public class ModificadorUi extends javax.swing.JFrame {
              funcionEliminarCarpeta1 (f);
             //Hasta aqui el borrar la carpeta
     
-        System.out.println("El Mod del brass ha sido instalado");
+        System.out.println("El Mod del Acero ha sido instalado");
     }
     public void InstalarCarbon() throws IOException, Exception{
         System.out.println("Instalando Mod para hacer carbón en la hoguera");
@@ -518,7 +518,7 @@ public class ModificadorUi extends javax.swing.JFrame {
              funcionEliminarCarpeta1 (f);
             //Hasta aqui el borrar la carpeta
     
-        System.out.println("El Mod del brass ha sido instalado");
+        System.out.println("El Mod del carbon ha sido instalado");
     }
     public void InstalarJunction() throws IOException, Exception{
         System.out.println("Instalando Craft Junction");
