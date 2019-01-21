@@ -24,58 +24,57 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="checkJunction" min="-2" max="-2" attributes="0"/>
-                                  <Component id="checkHdhq2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="checkSimple" min="-2" max="-2" attributes="0"/>
-                                  <Component id="checkVehiculos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="checkHdhq4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="checkBrass" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="checkTraduccion" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="addBoton" min="-2" pref="168" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="cancelBoton" max="32767" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="addBoton" min="-2" pref="168" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="cancelBoton" min="-2" pref="128" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="textDirectorio" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="botonDirectorio" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="checkJunction" min="-2" max="-2" attributes="0"/>
+                                  <Component id="checkCarbon" min="-2" max="-2" attributes="0"/>
+                                  <Component id="checkSimple" min="-2" max="-2" attributes="0"/>
+                                  <Component id="checkVehiculos" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="checkAcero" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="checkBrass" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="textDirectorio" min="-2" pref="280" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="botonDirectorio" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="checkTraduccion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="17" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="27" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -92,16 +91,16 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="checkVehiculos" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="checkHdhq4" min="-2" max="-2" attributes="0"/>
+              <Component id="checkAcero" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="checkHdhq2" min="-2" max="-2" attributes="0"/>
+              <Component id="checkCarbon" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="checkJunction" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="checkBrass" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="checkTraduccion" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="checkTraduccion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="addBoton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cancelBoton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -124,12 +123,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Veh&#xed;culos m&#xe1;s r&#xe1;pidos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkVehiculosActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="checkHdhq4">
+    <Component class="javax.swing.JCheckBox" name="checkAcero">
       <Properties>
-        <Property name="text" type="java.lang.String" value="HDHQ 4K Texturas (proximamente)"/>
+        <Property name="text" type="java.lang.String" value="17.0 Acero a lvl35"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="checkBrass">
@@ -142,11 +143,10 @@
         <Property name="text" type="java.lang.String" value="Junction Box"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="checkHdhq2">
+    <Component class="javax.swing.JCheckBox" name="checkCarbon">
       <Properties>
-        <Property name="text" type="java.lang.String" value="HDHQ 2K Texturas (proximamente)"/>
+        <Property name="text" type="java.lang.String" value="Carb&#xf3;n en hoguera"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -181,7 +181,7 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="64" green="64" red="64" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Versi&#xf3;n Alpha 17.1 Estable"/>
+        <Property name="text" type="java.lang.String" value="Versi&#xf3;n 1.0"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="textDirectorio">

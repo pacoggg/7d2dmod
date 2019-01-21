@@ -39,10 +39,10 @@ public class ModificadorUi extends javax.swing.JFrame {
 
         checkSimple = new javax.swing.JCheckBox();
         checkVehiculos = new javax.swing.JCheckBox();
-        checkHdhq4 = new javax.swing.JCheckBox();
+        checkAcero = new javax.swing.JCheckBox();
         checkBrass = new javax.swing.JCheckBox();
         checkJunction = new javax.swing.JCheckBox();
-        checkHdhq2 = new javax.swing.JCheckBox();
+        checkCarbon = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
         addBoton = new javax.swing.JButton();
         cancelBoton = new javax.swing.JButton();
@@ -63,18 +63,21 @@ public class ModificadorUi extends javax.swing.JFrame {
         });
 
         checkVehiculos.setText("Vehículos más rápidos");
+        checkVehiculos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkVehiculosActionPerformed(evt);
+            }
+        });
 
-        checkHdhq4.setText("HDHQ 4K Texturas (proximamente)");
-        checkHdhq4.setToolTipText("");
-        checkHdhq4.setEnabled(false);
+        checkAcero.setText("17.0 Acero a lvl35");
+        checkAcero.setToolTipText("");
 
         checkBrass.setText("Cobre y Zinc para hacer Brass");
 
         checkJunction.setText("Junction Box");
 
-        checkHdhq2.setText("HDHQ 2K Texturas (proximamente)");
-        checkHdhq2.setToolTipText("");
-        checkHdhq2.setEnabled(false);
+        checkCarbon.setText("Carbón en hoguera");
+        checkCarbon.setToolTipText("");
 
         jLabel1.setText("Selecciona las modificaciones que quieres añadir al juego.");
 
@@ -96,7 +99,7 @@ public class ModificadorUi extends javax.swing.JFrame {
         checkTraduccion.setEnabled(false);
 
         jLabel2.setBackground(new java.awt.Color(100, 100, 100));
-        jLabel2.setText("Versión Alpha 17.1 Estable");
+        jLabel2.setText("Versión 1.0");
 
         textDirectorio.setText("C:\\Program Files (x86)\\Steam\\steamapps\\common\\7 Days To Die");
         textDirectorio.setToolTipText("");
@@ -120,44 +123,44 @@ public class ModificadorUi extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(addBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cancelBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(checkJunction)
-                                    .addComponent(checkHdhq2)
+                                    .addComponent(checkCarbon)
                                     .addComponent(checkSimple)
                                     .addComponent(checkVehiculos)
-                                    .addComponent(checkHdhq4)
-                                    .addComponent(checkBrass)
-                                    .addComponent(checkTraduccion))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(addBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cancelBoton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(textDirectorio, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(botonDirectorio))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(37, 37, 37)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(checkAcero)
+                                    .addComponent(checkBrass))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel3)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(textDirectorio, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(botonDirectorio))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addGap(37, 37, 37))))))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(checkTraduccion)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
@@ -172,16 +175,16 @@ public class ModificadorUi extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(checkVehiculos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkHdhq4)
+                .addComponent(checkAcero)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkHdhq2)
+                .addComponent(checkCarbon)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(checkJunction)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(checkBrass)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkTraduccion)
                 .addGap(18, 18, 18)
+                .addComponent(checkTraduccion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addBoton)
                     .addComponent(cancelBoton))
@@ -233,23 +236,27 @@ public class ModificadorUi extends javax.swing.JFrame {
             checkVehiculos.setSelected(false);
             checkVehiculos.setEnabled(false);
         } 
-        if (checkHdhq4.isSelected()==true) {
+        if (checkAcero.isSelected()==true) {
             try {
-                InstalarHdhq4();
+                InstalarAcero();
             } catch (IOException ex) {
                 Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
             }
-            checkHdhq4.setSelected(false);
-            checkHdhq4.setEnabled(false);
+            checkAcero.setSelected(false);
+            checkAcero.setEnabled(false);
         } 
-        if (checkHdhq2.isSelected()==true) {
+        if (checkCarbon.isSelected()==true) {
             try {
-                InstalarHdhq2();
+                InstalarCarbon();
             } catch (IOException ex) {
                 Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
             }
-            checkHdhq2.setSelected(false);
-            checkHdhq2.setEnabled(false);
+            checkCarbon.setSelected(false);
+            checkCarbon.setEnabled(false);
         } 
         if (checkJunction.isSelected()==true) {
             try {
@@ -284,6 +291,10 @@ public class ModificadorUi extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textDirectorioActionPerformed
 
+    private void checkVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkVehiculosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkVehiculosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -315,17 +326,31 @@ public class ModificadorUi extends javax.swing.JFrame {
     
         System.out.println("El Mod del brass ha sido instalado");
     }
-    public void InstalarHdhq4() throws IOException{
-        System.out.println("Instalando HDHQ 4K");
-        String origen="hdhq4";
+    public void InstalarAcero() throws IOException, Exception{
+        System.out.println("Instalando Mod para hacer acero a lvl 35");
+        descargaMods.DescargaMod("PacoG_Mod");
+        String origen="c:/acero";
         String destino=textDirectorio.getText();
-        copy(origen, destino);     
+        copy(origen, destino);
+        File f= new File(origen);
+            //Intentando borrar la carpeta
+             funcionEliminarCarpeta1 (f);
+            //Hasta aqui el borrar la carpeta
+    
+        System.out.println("El Mod del brass ha sido instalado");
     }
-    public void InstalarHdhq2() throws IOException{
-        System.out.println("Instalando HDHQ 2K");
-        String origen="hdhq2";
+    public void InstalarCarbon() throws IOException, Exception{
+        System.out.println("Instalando Mod para hacer carbón en la hoguera");
+        descargaMods.DescargaMod("carbon");
+        String origen="c:/carbon";
         String destino=textDirectorio.getText();
-        copy(origen, destino);      
+        copy(origen, destino);
+        File f= new File(origen);
+            //Intentando borrar la carpeta
+             funcionEliminarCarpeta1 (f);
+            //Hasta aqui el borrar la carpeta
+    
+        System.out.println("El Mod del brass ha sido instalado");
     }
     public void InstalarJunction() throws IOException, Exception{
         System.out.println("Instalando Craft Junction");
@@ -441,9 +466,9 @@ public class ModificadorUi extends javax.swing.JFrame {
     private javax.swing.JButton addBoton;
     private javax.swing.JButton botonDirectorio;
     private javax.swing.JButton cancelBoton;
+    private javax.swing.JCheckBox checkAcero;
     private javax.swing.JCheckBox checkBrass;
-    private javax.swing.JCheckBox checkHdhq2;
-    private javax.swing.JCheckBox checkHdhq4;
+    private javax.swing.JCheckBox checkCarbon;
     private javax.swing.JCheckBox checkJunction;
     private javax.swing.JCheckBox checkSimple;
     private javax.swing.JCheckBox checkTraduccion;
