@@ -43,19 +43,31 @@ public class ModificadorUi extends javax.swing.JFrame {
         checkBrass = new javax.swing.JCheckBox();
         checkJunction = new javax.swing.JCheckBox();
         checkCarbon = new javax.swing.JCheckBox();
-        jLabel1 = new javax.swing.JLabel();
-        addBoton = new javax.swing.JButton();
-        cancelBoton = new javax.swing.JButton();
         checkTraduccion = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         textDirectorio = new javax.swing.JTextField();
         botonDirectorio = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        addBoton = new javax.swing.JButton();
+        cancelBoton = new javax.swing.JButton();
+        texto = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        textoAyuda = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("AÑADIENDO MODIFICADORES");
 
         checkSimple.setText("Simple UI");
+        checkSimple.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        checkSimple.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                checkSimpleMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                checkSimpleMouseExited(evt);
+            }
+        });
         checkSimple.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkSimpleActionPerformed(evt);
@@ -79,27 +91,15 @@ public class ModificadorUi extends javax.swing.JFrame {
         checkCarbon.setText("Carbón en hoguera");
         checkCarbon.setToolTipText("");
 
-        jLabel1.setText("Selecciona las modificaciones que quieres añadir al juego.");
-
-        addBoton.setText("AÑADIR");
-        addBoton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addBotonActionPerformed(evt);
-            }
-        });
-
-        cancelBoton.setText("CANCELAR");
-        cancelBoton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelBotonActionPerformed(evt);
-            }
-        });
-
         checkTraduccion.setText("Traducción al español (proximamente)");
         checkTraduccion.setEnabled(false);
 
+        jLabel1.setText("Selecciona las modificaciones que quieres añadir al juego.");
+
         jLabel2.setBackground(new java.awt.Color(100, 100, 100));
         jLabel2.setText("Versión 1.0");
+
+        jLabel3.setText("Selecciona la carpeta de instalación del juego");
 
         textDirectorio.setText("C:\\Program Files (x86)\\Steam\\steamapps\\common\\7 Days To Die");
         textDirectorio.setToolTipText("");
@@ -116,75 +116,120 @@ public class ModificadorUi extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Selecciona la carpeta de instalación del juego");
+        addBoton.setText("AÑADIR");
+        addBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBotonActionPerformed(evt);
+            }
+        });
+
+        cancelBoton.setText("CANCELAR");
+        cancelBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelBotonActionPerformed(evt);
+            }
+        });
+
+        texto.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel4.setText("AYUDA:");
+
+        textoAyuda.setEditable(false);
+        textoAyuda.setColumns(20);
+        textoAyuda.setLineWrap(true);
+        textoAyuda.setRows(5);
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí\nuna ayudita.");
+
+        javax.swing.GroupLayout textoLayout = new javax.swing.GroupLayout(texto);
+        texto.setLayout(textoLayout);
+        textoLayout.setHorizontalGroup(
+            textoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(textoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(textoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(textoLayout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(textoAyuda))
+                .addContainerGap())
+        );
+        textoLayout.setVerticalGroup(
+            textoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(textoLayout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textoAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(addBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cancelBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34)
+                        .addComponent(cancelBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(checkJunction)
+                            .addComponent(checkCarbon)
+                            .addComponent(checkSimple)
+                            .addComponent(checkVehiculos)
+                            .addComponent(checkAcero)
+                            .addComponent(checkBrass)
+                            .addComponent(checkTraduccion)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(checkJunction)
-                                    .addComponent(checkCarbon)
-                                    .addComponent(checkSimple)
-                                    .addComponent(checkVehiculos)
-                                    .addComponent(checkAcero)
-                                    .addComponent(checkBrass))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3)
+                                .addGap(95, 95, 95)
                                 .addComponent(jLabel2))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel3)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(textDirectorio, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(botonDirectorio))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addComponent(jLabel1)
-                                    .addGap(37, 37, 37))))))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(checkTraduccion)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGap(37, 37, 37))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(texto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(81, 81, 81))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textDirectorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonDirectorio))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(checkSimple)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkVehiculos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkAcero)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkCarbon)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkJunction)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkBrass)
-                .addGap(18, 18, 18)
-                .addComponent(checkTraduccion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textDirectorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botonDirectorio))
+                        .addGap(18, 18, 18)
+                        .addComponent(checkSimple)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(checkVehiculos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(checkAcero)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(checkCarbon)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(checkJunction)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(checkBrass)
+                        .addGap(18, 18, 18)
+                        .addComponent(checkTraduccion))
+                    .addComponent(texto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addBoton)
                     .addComponent(cancelBoton))
@@ -294,6 +339,16 @@ public class ModificadorUi extends javax.swing.JFrame {
     private void checkVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkVehiculosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_checkVehiculosActionPerformed
+
+    private void checkSimpleMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkSimpleMouseEntered
+        // al pasar el mouse por encima sale un texto de ayuda sobre el Mod
+        textoAyuda.setText("Este Mod cambia el Hud de la pantalla del juego mstrando en la parte inferior izquierda sendas barras con la comida y el agua");
+    }//GEN-LAST:event_checkSimpleMouseEntered
+
+    private void checkSimpleMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkSimpleMouseExited
+        // al quitar el mouse de encima desaparece un texto de ayuda sobre el Mod
+        
+    }//GEN-LAST:event_checkSimpleMouseExited
 
     /**
      * @param args the command line arguments
@@ -476,6 +531,9 @@ public class ModificadorUi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField textDirectorio;
+    private javax.swing.JPanel texto;
+    private javax.swing.JTextArea textoAyuda;
     // End of variables declaration//GEN-END:variables
 }
