@@ -167,7 +167,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Carb&#xf3;n en hoguera y &#xc1;cido en E. de Qu&#xed;mica"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
-        <Property name="actionCommand" type="java.lang.String" value="Carb&#xf3;n en hoguera y &#xc1;cido en E. de Qu&#xed;mica"/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkCarbonMouseEntered"/>
@@ -221,7 +220,8 @@
     </Component>
     <Component class="javax.swing.JButton" name="addBoton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="A&#xd1;ADIR"/>
+        <Property name="text" type="java.lang.String" value=" A&#xd1;ADIR MOD(S)"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addBotonActionPerformed"/>
@@ -229,7 +229,8 @@
     </Component>
     <Component class="javax.swing.JButton" name="cancelBoton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="CANCELAR"/>
+        <Property name="text" type="java.lang.String" value="SALIR"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelBotonActionPerformed"/>

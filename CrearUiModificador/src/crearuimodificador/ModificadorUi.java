@@ -14,6 +14,7 @@ import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -122,7 +123,6 @@ public class ModificadorUi extends javax.swing.JFrame {
 
         checkCarbon.setText("Carbón en hoguera y Ácido en E. de Química");
         checkCarbon.setToolTipText("");
-        checkCarbon.setActionCommand("Carbón en hoguera y Ácido en E. de Química");
         checkCarbon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 checkCarbonMouseEntered(evt);
@@ -165,14 +165,16 @@ public class ModificadorUi extends javax.swing.JFrame {
             }
         });
 
-        addBoton.setText("AÑADIR");
+        addBoton.setText(" AÑADIR MOD(S)");
+        addBoton.setToolTipText("");
         addBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBotonActionPerformed(evt);
             }
         });
 
-        cancelBoton.setText("CANCELAR");
+        cancelBoton.setText("SALIR");
+        cancelBoton.setToolTipText("");
         cancelBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelBotonActionPerformed(evt);
@@ -309,77 +311,88 @@ public class ModificadorUi extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelBotonActionPerformed
 
     private void addBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBotonActionPerformed
-        if (checkSimple.isSelected()==true) {
-            try {
-                InstalarSimple();
-            } catch (IOException ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+        // Comprobamos que la ruta es correcta, si no lo es salimos sin hacer nada
+        File archivo = new File(textDirectorio.getText()+"/7DaysToDie.exe");
+        if (!archivo.exists()) {
+            JOptionPane.showMessageDialog(null,"OJO: ¡¡La ruta es incorrecta!!\nPon la ruta correcta.\nPrueba de nuevo.","RUTA INCORRECTA", JOptionPane.ERROR_MESSAGE);
+            System.out.println("OJO: ¡¡La ruta es incorrecta!!");
+            
+        }else 
+        {System.out.println("La ruta es correcta");
+    
+        
+            if (checkSimple.isSelected()==true) {
+                try {
+                    InstalarSimple();
+                } catch (IOException ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (Exception ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                checkSimple.setSelected(false);
+                checkSimple.setEnabled(false);
+            } 
+            if (checkVehiculos.isSelected()==true) {
+                try {
+                    InstalarVehiculos();
+                } catch (IOException ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (Exception ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                checkVehiculos.setSelected(false);
+                checkVehiculos.setEnabled(false);
+            } 
+            if (checkAcero.isSelected()==true) {
+                try {
+                    InstalarAcero();
+                } catch (IOException ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (Exception ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                checkAcero.setSelected(false);
+                checkAcero.setEnabled(false);
+            } 
+            if (checkCarbon.isSelected()==true) {
+                try {
+                    InstalarCarbon();
+                } catch (IOException ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (Exception ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                checkCarbon.setSelected(false);
+                checkCarbon.setEnabled(false);
+            } 
+            if (checkJunction.isSelected()==true) {
+                try {
+                    InstalarJunction();
+                } catch (IOException ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (Exception ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                checkJunction.setSelected(false);
+                checkJunction.setEnabled(false);
+            } 
+            if (checkBrass.isSelected()==true) {
+                try {
+                    InstalarBrass();
+                } catch (IOException ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (Exception ex) {
+                    Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                checkBrass.setSelected(false);
+                checkBrass.setEnabled(false);
+            } 
+            if (checkTraduccion.isSelected()==true) {
+                InstalarTraduccion();
+                checkTraduccion.setSelected(false);
+                checkTraduccion.setEnabled(false);
             }
-            checkSimple.setSelected(false);
-            checkSimple.setEnabled(false);
         } 
-        if (checkVehiculos.isSelected()==true) {
-            try {
-                InstalarVehiculos();
-            } catch (IOException ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            checkVehiculos.setSelected(false);
-            checkVehiculos.setEnabled(false);
-        } 
-        if (checkAcero.isSelected()==true) {
-            try {
-                InstalarAcero();
-            } catch (IOException ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            checkAcero.setSelected(false);
-            checkAcero.setEnabled(false);
-        } 
-        if (checkCarbon.isSelected()==true) {
-            try {
-                InstalarCarbon();
-            } catch (IOException ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            checkCarbon.setSelected(false);
-            checkCarbon.setEnabled(false);
-        } 
-        if (checkJunction.isSelected()==true) {
-            try {
-                InstalarJunction();
-            } catch (IOException ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            checkJunction.setSelected(false);
-            checkJunction.setEnabled(false);
-        } 
-        if (checkBrass.isSelected()==true) {
-            try {
-                InstalarBrass();
-            } catch (IOException ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(ModificadorUi.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            checkBrass.setSelected(false);
-            checkBrass.setEnabled(false);
-        } 
-        if (checkTraduccion.isSelected()==true) {
-            InstalarTraduccion();
-            checkTraduccion.setSelected(false);
-            checkTraduccion.setEnabled(false);
-        }  
     }//GEN-LAST:event_addBotonActionPerformed
 
     private void textDirectorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textDirectorioActionPerformed
