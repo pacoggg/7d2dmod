@@ -75,6 +75,14 @@ public class ModificadorUi extends javax.swing.JFrame {
         });
 
         checkVehiculos.setText("Vehículos más rápidos");
+        checkVehiculos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                checkVehiculosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                checkVehiculosMouseExited(evt);
+            }
+        });
         checkVehiculos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkVehiculosActionPerformed(evt);
@@ -83,16 +91,57 @@ public class ModificadorUi extends javax.swing.JFrame {
 
         checkAcero.setText("17.0 Acero a lvl35");
         checkAcero.setToolTipText("");
+        checkAcero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                checkAceroMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                checkAceroMouseExited(evt);
+            }
+        });
 
         checkBrass.setText("Cobre y Zinc para hacer Brass");
+        checkBrass.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                checkBrassMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                checkBrassMouseExited(evt);
+            }
+        });
 
         checkJunction.setText("Junction Box");
+        checkJunction.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                checkJunctionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                checkJunctionMouseExited(evt);
+            }
+        });
 
-        checkCarbon.setText("Carbón en hoguera");
+        checkCarbon.setText("Carbón en hoguera y Ácido en E. de Química");
         checkCarbon.setToolTipText("");
+        checkCarbon.setActionCommand("Carbón en hoguera y Ácido en E. de Química");
+        checkCarbon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                checkCarbonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                checkCarbonMouseExited(evt);
+            }
+        });
 
         checkTraduccion.setText("Traducción al español (proximamente)");
         checkTraduccion.setEnabled(false);
+        checkTraduccion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                checkTraduccionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                checkTraduccionMouseExited(evt);
+            }
+        });
 
         jLabel1.setText("Selecciona las modificaciones que quieres añadir al juego.");
 
@@ -138,7 +187,8 @@ public class ModificadorUi extends javax.swing.JFrame {
         textoAyuda.setColumns(20);
         textoAyuda.setLineWrap(true);
         textoAyuda.setRows(5);
-        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí\nuna ayudita.");
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí una ayudita.");
+        textoAyuda.setWrapStyleWord(true);
 
         javax.swing.GroupLayout textoLayout = new javax.swing.GroupLayout(texto);
         texto.setLayout(textoLayout);
@@ -342,13 +392,76 @@ public class ModificadorUi extends javax.swing.JFrame {
 
     private void checkSimpleMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkSimpleMouseEntered
         // al pasar el mouse por encima sale un texto de ayuda sobre el Mod
-        textoAyuda.setText("Este Mod cambia el Hud de la pantalla del juego mstrando en la parte inferior izquierda sendas barras con la comida y el agua");
+        textoAyuda.setText("Este Mod cambia el Hud de la pantalla del juego añadiendo"
+                + " en la parte inferior izquierda sendas barras con la comida y el agua");
     }//GEN-LAST:event_checkSimpleMouseEntered
 
     private void checkSimpleMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkSimpleMouseExited
         // al quitar el mouse de encima desaparece un texto de ayuda sobre el Mod
-        
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí una ayudita.");
     }//GEN-LAST:event_checkSimpleMouseExited
+
+    private void checkVehiculosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkVehiculosMouseEntered
+        // TODO add your handling code here:
+        textoAyuda.setText("Este Mod cambia la velocidad de los vehículos");
+    }//GEN-LAST:event_checkVehiculosMouseEntered
+
+    private void checkVehiculosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkVehiculosMouseExited
+        // TODO add your handling code here:
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí una ayudita.");
+    }//GEN-LAST:event_checkVehiculosMouseExited
+
+    private void checkAceroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkAceroMouseEntered
+        // TODO add your handling code here:
+        textoAyuda.setText("Este Mod es exclusivo de la Alpha 17.0 Estable, y lo que hace es"
+                + " poder craftear el acero forjado y el crucible a lvl 35");
+    }//GEN-LAST:event_checkAceroMouseEntered
+
+    private void checkAceroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkAceroMouseExited
+        // TODO add your handling code here:
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí una ayudita.");
+    }//GEN-LAST:event_checkAceroMouseExited
+
+    private void checkCarbonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkCarbonMouseEntered
+        // TODO add your handling code here:
+        textoAyuda.setText("Este Mod (solo testeado en el Alpha 17.0 Estable), y lo que hace es"
+                + " poder hacer carbón en la hoguera y ácido en la Estación Química a lvl 10");
+    }//GEN-LAST:event_checkCarbonMouseEntered
+
+    private void checkCarbonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkCarbonMouseExited
+        // TODO add your handling code here:
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí una ayudita.");
+    }//GEN-LAST:event_checkCarbonMouseExited
+
+    private void checkJunctionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkJunctionMouseEntered
+        // TODO add your handling code here:
+        textoAyuda.setText("Este Mod instala unas cajas (Junction Box), que permiter conexiones sin cables a la vista");
+    }//GEN-LAST:event_checkJunctionMouseEntered
+
+    private void checkJunctionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkJunctionMouseExited
+        // TODO add your handling code here:
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí una ayudita.");
+    }//GEN-LAST:event_checkJunctionMouseExited
+
+    private void checkBrassMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkBrassMouseEntered
+        // TODO add your handling code here:
+        textoAyuda.setText("Este Mod permite craftear Brass con dos materiales nuevos, cobre y zinc, así como otros cambios ");
+    }//GEN-LAST:event_checkBrassMouseEntered
+
+    private void checkBrassMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkBrassMouseExited
+        // TODO add your handling code here:
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí una ayudita.");
+    }//GEN-LAST:event_checkBrassMouseExited
+
+    private void checkTraduccionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkTraduccionMouseEntered
+        // TODO add your handling code here:
+        textoAyuda.setText("Traduce el juego completo al español (PROXIMAMENTE)");
+    }//GEN-LAST:event_checkTraduccionMouseEntered
+
+    private void checkTraduccionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkTraduccionMouseExited
+        // TODO add your handling code here:
+        textoAyuda.setText("Pasa el cursor sobre el Mod y verás aquí una ayudita.");
+    }//GEN-LAST:event_checkTraduccionMouseExited
 
     /**
      * @param args the command line arguments

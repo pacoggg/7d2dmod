@@ -130,6 +130,8 @@
         <Property name="text" type="java.lang.String" value="Veh&#xed;culos m&#xe1;s r&#xe1;pidos"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkVehiculosMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkVehiculosMouseExited"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkVehiculosActionPerformed"/>
       </Events>
     </Component>
@@ -138,28 +140,49 @@
         <Property name="text" type="java.lang.String" value="17.0 Acero a lvl35"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkAceroMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkAceroMouseExited"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="checkBrass">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cobre y Zinc para hacer Brass"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkBrassMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkBrassMouseExited"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="checkJunction">
       <Properties>
         <Property name="text" type="java.lang.String" value="Junction Box"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkJunctionMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkJunctionMouseExited"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="checkCarbon">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Carb&#xf3;n en hoguera"/>
+        <Property name="text" type="java.lang.String" value="Carb&#xf3;n en hoguera y &#xc1;cido en E. de Qu&#xed;mica"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="actionCommand" type="java.lang.String" value="Carb&#xf3;n en hoguera y &#xc1;cido en E. de Qu&#xed;mica"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkCarbonMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkCarbonMouseExited"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="checkTraduccion">
       <Properties>
         <Property name="text" type="java.lang.String" value="Traducci&#xf3;n al espa&#xf1;ol (proximamente)"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkTraduccionMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="checkTraduccionMouseExited"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -260,7 +283,8 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Pasa el cursor sobre el Mod y ver&#xe1;s aqu&#xed;&#xa;una ayudita."/>
+            <Property name="text" type="java.lang.String" value="Pasa el cursor sobre el Mod y ver&#xe1;s aqu&#xed; una ayudita."/>
+            <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>
         </Component>
       </SubComponents>
